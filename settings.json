@@ -1,0 +1,22 @@
+{
+	"evmVersion": "istanbul",
+	"optimizer": {
+		"enabled": true,
+		"runs": 200
+	},
+	"libraries": {
+		"RiseinCourseNft.sol": {}
+	},
+	"outputSelection": {
+		"*": {
+			"*": [
+				"evm.bytecode",
+				"evm.deployedBytecode",
+				"devdoc",
+				"userdoc",
+				"metadata",
+				"abi"
+			]
+		}
+	}
+}
