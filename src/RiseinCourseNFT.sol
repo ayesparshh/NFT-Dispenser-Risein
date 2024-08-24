@@ -1,24 +1,3 @@
-// Layout of Contract:
-// version
-// imports
-// errors
-// interfaces, libraries, contracts
-// Type declarations
-// State variables
-// Events
-// Modifiers
-// Functions
-
-// Layout of Functions:
-// constructor
-// receive function (if exists)
-// fallback function (if exists)
-// external
-// public
-// internal
-// private
-// view & pure functions
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
@@ -28,18 +7,6 @@ import {Base64} from "./Base64.sol";
 import {IRiseinCourseNft} from "./IRiseinCourseNft.sol";
 import {IRiseinCourseChallenge} from "./IRiseinCourseChallenge.sol";
 
-/*
- * @title FoundryCourseNft
- * @author cyfrin.io
- * 
- * @notice check out https://web3education.dev for more badass web3 content!
- *
- * @notice This contract is used to mint NFTs for the Foundry 2023 ultimate course
- * each NFT is associated with a unique contract where devs can solve the challenge
- * associated with that address, and earn the NFT as a reward.
- *
- * Each challenge needs to be added to this contract, and only then can an NFT be minted.
- */
 contract RiseinCourseNft is ERC721, Ownable, IRiseinCourseNft {
     /////////////
     // Errors  //
@@ -85,7 +52,7 @@ contract RiseinCourseNft is ERC721, Ownable, IRiseinCourseNft {
     //////////////////////////////
     // Functions - Constructor  //
     //////////////////////////////
-    constructor() ERC721("Risein Course NFT", "FCN") {}
+    constructor() ERC721("Risein Course NFT", "RCN") {}
 
     ////////////////////////////
     // Functions - External  //

@@ -14,7 +14,7 @@ interface IRiseinCourseChallenge {
      * maybe be different in all cases because of different input parameters.
      * Because of this, we are not going to define the function here.
      *
-     * This function should call back to the FoundryCourseNft contract
+     * This function should call back to the RiseinCourseNft contract
      * to mint the NFT.
      */
     // function solveChallenge() external;
