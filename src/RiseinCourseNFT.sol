@@ -22,11 +22,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-import {ERC721} from "ERC721.sol";
-import {Ownable} from "Ownable.sol";
-import {Base64} from "Base64.sol";
-import {IRiseinCourseNft} from "IRiseinCourseNft.sol";
-import {IRiseinCourseChallenge} from "IRiseinCourseChallenge.sol";
+import {ERC721} from "./ERC721.sol";
+import {Ownable} from "./Ownable.sol";
+import {Base64} from "./Base64.sol";
+import {IRiseinCourseNft} from "./IRiseinCourseNft.sol";
+import {IRiseinCourseChallenge} from "./IRiseinCourseChallenge.sol";
 
 /*
  * @title FoundryCourseNft

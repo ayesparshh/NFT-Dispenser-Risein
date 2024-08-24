@@ -3,7 +3,7 @@
 
 pragma solidity ^0.8.0;
 
-import "Math.sol";
+import "./Math.sol";
 
 /**
  * @dev String operations.
