@@ -17,6 +17,7 @@ The `RiseinCourseNFT` project is a Solidity-based smart contract that implements
 - **Minting NFTs**: Users can mint NFTs by providing their address and a Twitter handle. This is handled by the [`mintNft`](src/IRiseinCourseNFT.sol) function.
 - **Adding Challenges**: The contract allows adding new challenge contracts that users can interact with to earn NFTs. This is managed by the [`addChallenge`](src/IRiseinCourseNFT.sol) function.
 - **Challenge Interface**: The project includes an interface for challenge contracts, [`IRiseinCourseChallenge`](src/IRiseinCourseChallenge.sol), which defines the necessary functions that each challenge contract must implement.
+- **OpenZeppelin**: This project extensively uses OpenZeppelin libraries for secure and reliable smart contract development. OpenZeppelin's ERC721 and Ownable contracts are inherited to implement the core functionalities of the RiseinCourseNFT contract.
 
 ### Contract Details
 
