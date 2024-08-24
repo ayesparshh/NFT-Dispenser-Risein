@@ -1,66 +1,65 @@
-## Foundry
+# RiseinCourseNFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+![NFT Image](https://maroon-many-cod-896.mypinata.cloud/ipfs/QmNwJwXQVP22sAb7HFHninieKE4MvXLCLjttz2GDYUsxcb)
 
-Foundry consists of:
+## Contract Address
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+You can access the deployed contract on Sepolia Etherscan: [0x26394ec50ff41dc03b8288c1916f8d7425d63ad7](https://sepolia.etherscan.io/address/0x26394ec50ff41dc03b8288c1916f8d7425d63ad7)
 
-## Documentation
+## Project Overview
 
-https://book.getfoundry.sh/
+The `RiseinCourseNFT` project is a Solidity-based smart contract that implements an ERC721 Non-Fungible Token (NFT). This project is designed to mint NFTs for users who complete specific challenges. The main functionalities of the project include:
 
-## Usage
+### Key Features
 
-### Build
+- **Minting NFTs**: Users can mint NFTs by providing their address and a Twitter handle. This is handled by the [`mintNft`](src/IRiseinCourseNFT.sol) function.
+- **Adding Challenges**: The contract allows adding new challenge contracts that users can interact with to earn NFTs. This is managed by the [`addChallenge`](src/IRiseinCourseNFT.sol) function.
+- **Challenge Interface**: The project includes an interface for challenge contracts, [`IRiseinCourseChallenge`](src/IRiseinCourseChallenge.sol), which defines the necessary functions that each challenge contract must implement.
 
-```shell
-$ forge build
-```
+### Contract Details
 
-### Test
+- **Main Contract**: The main contract is [`RiseinCourseNft`](src/RiseinCourseNFT.sol), which inherits from OpenZeppelin's ERC721 and Ownable contracts.
+- **Deployment Script**: The deployment of the contract is handled by the [`DeployRiseinCourseNFT`](script/DeployRiseinCourseNFT.s.sol) script, which uses Foundry's `Script` library to automate the deployment process.
 
-```shell
-$ forge test
-```
+### Development Setup
 
-### Format
+1. **Clone the Repository**:
 
-```shell
-$ forge fmt
-```
+   ```sh
+   git clone https://github.com/your-repo/riseincoursenft.git
+   cd riseincoursenft
+   ```
 
-### Gas Snapshots
+2. **Install Dependencies**:
 
-```shell
-$ forge snapshot
-```
+   ```sh
+   forge install
+   ```
 
-### Anvil
+3. **Compile the Contracts**:
 
-```shell
-$ anvil
-```
+   ```sh
+   forge build
+   ```
 
-### Deploy
+4. **Deploy the Contract**:
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+   ```sh
+   forge script script/DeployRiseinCourseNFT.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast
+   ```
 
-### Cast
+5. **Verify the Contract**:
+   ```sh
+   forge verify-contract --chain-id 11155111 --num-of-optimizations 200 <contract_address> src/RiseinCourseNFT.sol:RiseinCourseNft
+   ```
 
-```shell
-$ cast <subcommand>
-```
+### Environment Variables
 
-### Help
+Make sure to set the following environment variables in your `.env` file:
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+```properties
+PRIVATE_KEY=your_private_key
+RPC_URL=http://127.0.0.1:8545
+SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/your_alchemy_key
+ETHERSCAN_API_KEY=your_etherscan_api_key
 ```
