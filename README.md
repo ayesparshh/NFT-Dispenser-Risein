@@ -19,6 +19,10 @@ The `RiseinCourseNFT` project is a Solidity-based smart contract that implements
 - **Challenge Interface**: The project includes an interface for challenge contracts, [`IRiseinCourseChallenge`](src/IRiseinCourseChallenge.sol), which defines the necessary functions that each challenge contract must implement.
 - **OpenZeppelin**: This project extensively uses OpenZeppelin libraries for secure and reliable smart contract development. OpenZeppelin's ERC721 and Ownable contracts are inherited to implement the core functionalities of the RiseinCourseNFT contract.
 
+### Vision
+- **User Experience**: Making learning rewarding hooks users to complete milestones as well as the course.
+- **Validation**: If users successfully completes the tasks according to what they learnt will boost users confident and eventually company will grow.
+
 ### Contract Details
 
 - **Main Contract**: The main contract is [`RiseinCourseNft`](src/RiseinCourseNFT.sol), which inherits from OpenZeppelin's ERC721 and Ownable contracts.
